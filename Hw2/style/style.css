@@ -1,7 +1,7 @@
 body {
     padding: 0;
     margin: 0;
-    background-image: "Hw2/Images/4840.png";
+    background-image:url("../Images/4840.png");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,15 +9,47 @@ body {
     font-family: 'Arial', sans-serif;
     font-weight: 300;
 }
-.container {
-  position: relative;
+.description-container {
+    min-height: 50vh;
+    font-size: 2em;
 }
-.text-block {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: white;
-  padding-left: 50px;
-  padding-right: 50px;
+
+.description {
+    margin: 25vh auto;
+    padding: 1em;
+    text-align: center;
+    width: 75%;
+    min-width: 300px;
+    background-color: rgba(255, 189, 135, 0.692);
+
+}
+
+@media (max-width: 865px) {
+    .description-container {
+        font-size: 1.5em;
+    }
+}
+
+.title {
+    font-size: 22pt;
+    color: #ffffff;
+    float: center;
+    margin-top: 170px;
+    margin-left: 17em;
+    margin-right: 17em;
+    padding: 2em;
+    text-align: center;
+    background-color: rgba(255, 172, 95, 0.363);
+}
+.title h1 {
+    font-family: 'Stylish', sans-serif;
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+}
+
+.title h2 {
+    font-family: 'Stylish', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 0.5em;
 }
