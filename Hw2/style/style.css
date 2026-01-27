@@ -1,3 +1,4 @@
+
 body {
     padding: 0;
     margin: 0;
@@ -9,35 +10,68 @@ body {
     font-family: 'Arial', sans-serif;
     font-weight: 300;
 }
-.description-container {
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-instagram {
+  background: #2e2e2e88;
+  color: white;
+}
+.aboutme-container {
     min-height: 50vh;
     font-size: 2em;
 }
 
-.description {
+.aboutme {
     margin: 25vh auto;
     padding: 1em;
     text-align: center;
     width: 75%;
     min-width: 300px;
-    background-color: rgba(255, 189, 135, 0.692);
+    background-color: rgba(255, 172, 95, 0.363);
 
 }
 
 @media (max-width: 865px) {
-    .description-container {
+    .-container {
         font-size: 1.5em;
     }
 }
+.story-container {
+    min-height: 50vh;
+    font-size: 2em;
+}
 
+.story {
+    margin: 25vh auto;
+    padding: 1em;
+    text-align: center;
+    width: 75%;
+    min-width: 300px;
+    background-color: rgba(255, 172, 95, 0.363);
+
+}
+
+@media (max-width: 865px) {
+    .story-container {
+        font-size: 1.5em;
+    }
+}
 .title {
     font-size: 22pt;
     color: #ffffff;
-    float: center;
-    margin-top: 170px;
-    margin-left: 17em;
-    margin-right: 17em;
+    margin: 170px auto 0 auto;
     padding: 2em;
+    max-width: 75%;
     text-align: center;
     background-color: rgba(255, 172, 95, 0.363);
 }
@@ -51,5 +85,13 @@ body {
     font-family: 'Stylish', sans-serif;
     font-weight: 300;
     font-style: italic;
-    line-height: 0.5em;
+    line-height: 1.3em;
+}
+
+hr {
+  border: none;
+  height: 5px;
+  background-color: rgb(0, 0, 0);
+  max-width: 60%;
+  margin: 2em auto;
 }
