@@ -1,7 +1,4 @@
 URl: https://pastry-chan.github.io/MART441/HW4/index.html
 For me the hardest part about this assignment was actually thinking about what story I wanted to do that would be fun but easy.
-<<<<<<< Updated upstream
 From there it was very difficult to figure out how to create different branching story lines, I don't know if that's the right word but I assume you understand what I mean. Once I figured out the endings I wanted it became easier to figure out how to get the player there. If I had a lot more time I would have drawn out the different scenes and I would love to make it so that the images changes with each scene rather than just being one image. 
-=======
-From there it was very difficult to figure out how to create different branching story lines, I don't know if that's the right word but I assume you understand what I mean. Once I figured out the endings I wanted it became easier to figure out how to get the player there. If I had a lot more time I would have drawn out the different scenes and I would love to make it so that the images changes with each scene rather than just being one image. The AI generated one felt a bit bland and too straight forward with its ideas and story. I enjoyed making mine more creative and making the solutions and outcomes creative. 
->>>>>>> Stashed changes
+The AI generated one felt a bit bland and too straight forward with its ideas/story as well as its strategies and outcomes / endings. I enjoyed making mine more creative and making the solutions and outcomes creative. 
