@@ -1,0 +1,181 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <style>
+        body{
+            background-color: #000520;
+        }
+    </style>
+    <script>
+        function getChoice1()
+        {
+            var myChoice = document.getElementById("choice").value;
+            var myQuestion = document.getElementById("question");
+            if(myChoice === "Yes")
+            {
+                document.getElementById("choice").style.display="none";
+                document.getElementById("btnSubmit").style.display="none";
+                
+                document.getElementById("choice2").style.display="block";
+                document.getElementById("btnSubmit2").style.display="block";
+                
+                document.getElementById("OpeningImage").src = "./Images/woc.png"
+                myQuestion.innerHTML = "Great! I will ask you a few questions first. Do you like warm or cold colors?";
+            }
+            else if(myChoice === "No")
+            {
+                myQuestion.innerHTML = "Then why did you come see me? You're not getting your dollar back.";
+            }
+            else
+            {
+                myQuestion.innerHTML = "Invalid answer";
+            }
+        }
+
+        function getChoice2()
+        {
+            var myChoice = document.getElementById("choice2").value;
+            var myQuestion = document.getElementById("question");
+
+            document.getElementById("choice2").style.display="none";
+            document.getElementById("btnSubmit2").style.display="none";
+
+            document.getElementById("choice3").style.display="block";
+            document.getElementById("btnSubmit3").style.display="block";
+
+            if(myChoice === "Warm")
+            {
+                document.getElementById("OpeningImage").src = "./Images/mob.png"
+                myQuestion.innerHTML = "Movies or Books?";
+            }
+            else if(myChoice === "Cold")
+            {
+                document.getElementById("OpeningImage").src = "./Images/Start.png"
+                myQuestion.innerHTML = "Small persistent setbacks will test your patience but those challenges will bring opportunities.";
+            }
+        }
+
+        function getChoice3()
+        {
+            var myChoice = document.getElementById("choice3").value;
+            var myQuestion = document.getElementById("question");
+
+            document.getElementById("choice3").style.display="none";
+            document.getElementById("btnSubmit3").style.display="none";
+    
+            document.getElementById("choice4").style.display="block";
+            document.getElementById("btnSubmit4").style.display="block";
+
+            if(myChoice === "Movies")
+            {
+                document.getElementById("OpeningImage").src = "./Images/sross.png"
+                myQuestion.innerHTML = "Sunrise or Sunset?";
+            }
+            else if(myChoice === "Books")
+            {
+                document.getElementById("OpeningImage").src = "./Images/Start.png"
+                myQuestion.innerHTML = "Stay open to teamwork and advice, well thought-out plans will lead to hidden surprises.";
+            }
+        }
+
+        function getChoice4()
+        {
+            var myChoice = document.getElementById("choice4").value;
+            var myQuestion = document.getElementById("question");
+
+            document.getElementById("choice4").style.display="none";
+            document.getElementById("btnSubmit4").style.display="none";
+    
+            document.getElementById("choice5").style.display="block";
+            document.getElementById("btnSubmit5").style.display="block";
+
+            if(myChoice === "Sunrise")
+            {
+                document.getElementById("OpeningImage").src = "./Images/ros.png"
+                myQuestion.innerHTML = "Road Trips or Staycations?";
+            }
+            else if(myChoice === "Sunset")
+            {
+                document.getElementById("OpeningImage").src = "./Images/Start.png"
+                myQuestion.innerHTML = "Past difficulties will unravel into valuable breakthroughs and long-waited recognition.";
+            }
+        }
+
+        function getChoice5()
+        {
+            var myChoice = document.getElementById("choice5").value;
+            var myQuestion = document.getElementById("question");
+
+            document.getElementById("choice5").style.display="none";
+            document.getElementById("btnSubmit5").style.display="none";
+        
+            document.getElementById("choice6").style.display="block";
+            document.getElementById("btnSubmit6").style.display="block";
+
+            if(myChoice === "Road Trips")
+            {
+                document.getElementById("OpeningImage").src = "./Images/dos.png"
+                myQuestion.innerHTML = "Draw or Sculpt?";
+            }
+            else if(myChoice === "Staycation")
+            {
+                document.getElementById("OpeningImage").src = "./Images/Start.png"
+                myQuestion.innerHTML = "Your calm and kind nature will bring opportunities for love and financial growth.";
+            }
+        }
+
+        function getChoice6()
+        {
+            var myChoice = document.getElementById("choice6").value;
+            var myQuestion = document.getElementById("question");
+
+            document.getElementById("choice6").style.display="none";
+            document.getElementById("btnSubmit6").style.display="none";
+
+            if(myChoice === "Draw")
+            {
+                document.getElementById("OpeningImage").src = "./Images/Start.png"
+                myQuestion.innerHTML = "With resilience and adaptability bumps in the road will be valuable stepping stones.";
+            }
+            else if(myChoice === "Sculpt")
+            {
+                document.getElementById("OpeningImage").src = "./Images/Start.png"
+                myQuestion.innerHTML = "By holding firm and being flexible you'll find growth even in turbulence.";
+           }
+        }
+    
+
+    </script>
+    <body>
+
+        <h1>Onyx the fortune teller</h1>
+        <br>
+        <img src="./Images/Start.png" id="OpeningImage">
+    <div id="question">
+    <br>
+        <p class="p2">"Welcome to my booth. I am Onyx the fortune teller. I will tell your fortune.  Would you like to know it?"</p>
+    </div>
+       
+        <br>
+        <input type="text" size="30" id="choice" placeholder="Yes or No?">
+        <button id="btnSubmit" onclick="getChoice1();">Click to continue</button>
+
+        <input type="text" size="30" id="choice2" placeholder="Enter Warm or Cold." style="display:none">
+        <button id="btnSubmit2" onclick="getChoice2();"  style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice3" placeholder="Enter Movies or Books."  style="display:none">
+        <button id="btnSubmit3" onclick="getChoice3();" style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice4" placeholder="Enter Sunrise or Sunset."  style="display:none">
+        <button id="btnSubmit4" onclick="getChoice4();" style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice5" placeholder="Enter Road Trips or Staycation."  style="display:none">
+        <button id="btnSubmit5" onclick="getChoice5();" style="display:none">Click to continue</button>
+
+        <input type="text" size="30" id="choice6" placeholder="Enter Draw or Sculpt."  style="display:none">
+        <button id="btnSubmit6" onclick="getChoice6();" style="display:none">Click to continue</button>
+
+    </body>
+
+</html>
