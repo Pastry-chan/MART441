@@ -41,13 +41,15 @@
             document.getElementById("choice2").style.display="none";
             document.getElementById("btnSubmit2").style.display="none";
 
-            document.getElementById("choice3").style.display="block";
-            document.getElementById("btnSubmit3").style.display="block";
+            
 
             if(myChoice === "Warm")
             {
                 document.getElementById("OpeningImage").src = "./Images/mob.png"
                 myQuestion.innerHTML = "Movies or Books?";
+
+                document.getElementById("choice3").style.display="block";
+                document.getElementById("btnSubmit3").style.display="block";
             }
             else if(myChoice === "Cold")
             {
@@ -64,13 +66,15 @@
             document.getElementById("choice3").style.display="none";
             document.getElementById("btnSubmit3").style.display="none";
     
-            document.getElementById("choice4").style.display="block";
-            document.getElementById("btnSubmit4").style.display="block";
+            
 
             if(myChoice === "Movies")
             {
                 document.getElementById("OpeningImage").src = "./Images/sross.png"
                 myQuestion.innerHTML = "Sunrise or Sunset?";
+
+                document.getElementById("choice4").style.display="block";
+                document.getElementById("btnSubmit4").style.display="block";
             }
             else if(myChoice === "Books")
             {
@@ -87,13 +91,15 @@
             document.getElementById("choice4").style.display="none";
             document.getElementById("btnSubmit4").style.display="none";
     
-            document.getElementById("choice5").style.display="block";
-            document.getElementById("btnSubmit5").style.display="block";
+            
 
             if(myChoice === "Sunrise")
             {
                 document.getElementById("OpeningImage").src = "./Images/ros.png"
                 myQuestion.innerHTML = "Road Trips or Staycations?";
+
+                document.getElementById("choice5").style.display="block";
+                document.getElementById("btnSubmit5").style.display="block";
             }
             else if(myChoice === "Sunset")
             {
@@ -110,13 +116,16 @@
             document.getElementById("choice5").style.display="none";
             document.getElementById("btnSubmit5").style.display="none";
         
-            document.getElementById("choice6").style.display="block";
-            document.getElementById("btnSubmit6").style.display="block";
+            
 
             if(myChoice === "Road Trips")
             {
                 document.getElementById("OpeningImage").src = "./Images/dos.png"
                 myQuestion.innerHTML = "Draw or Sculpt?";
+
+               document.getElementById("choice6").style.display="block";
+            document.getElementById("btnSubmit6").style.display="block"; 
+            
             }
             else if(myChoice === "Staycation")
             {
@@ -144,7 +153,25 @@
                 myQuestion.innerHTML = "By holding firm and being flexible you'll find growth even in turbulence.";
            }
         }
-    
+    function restartGame() {
+    document.getElementById("OpeningImage").src = "./Images/Start.png";
+    document.getElementById("question").innerHTML =
+        '<p class="p2">"Welcome to my booth. I am Onyx the fortune teller. I will tell your fortune. Would you like to know it?"</p>';
+
+    document.getElementById("choice").style.display = "none";
+    document.getElementById("btnSubmit").style.display = "none";
+
+
+    for (let i = 2; i <= 6; i++) {
+        document.getElementById("choice" + i).style.display = "none";
+        document.getElementById("btnSubmit" + i).style.display = "none";
+    }
+
+    for (let i = 1; i <= 6; i++) {
+        let field = document.getElementById("choice" + (i === 1 ? "" : i));
+        if (field) field.value = "";
+    }
+}
 
     </script>
     <body>
@@ -176,6 +203,7 @@
         <input type="text" size="30" id="choice6" placeholder="Enter Draw or Sculpt."  style="display:none">
         <button id="btnSubmit6" onclick="getChoice6();" style="display:none">Click to continue</button>
 
+        <button onclick="restartGame()">Restart</button>
     </body>
 
 </html>
