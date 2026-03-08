@@ -26,7 +26,7 @@ function initializeArray()
     var slide1 = new ViewFinder(
         "Missing and Murdered Indigenous Women Mural",
         "Images/Image1.jpg",
-        "A mural marking the two year anniversary of Hanna Harris who was violently murdered on July 8th 2013. The mural is a tribute to her and other missing and murdered Indigenous women.",
+        "A mural marking the two year anniversary of Hanna Harris who was violently murdered on July 8th 2013. The mural is a tribute to her while also bringing awarness to the countless missing and murdered Indigenous women.",
         "Lucinda Hinojos",
         2020
     );
@@ -34,7 +34,7 @@ function initializeArray()
     var slide2 = new ViewFinder(
         "Japan's anti-nuke movement",
         "Images/Image2.jpg",
-        "Following the Fukushima nuclear disaster in 2011, people in Japan advocated for global abolition of nuclear weapons as well as nuclear power.",
+        "Following the Fukushima nuclear disaster in 2011, people in Japan advocated for global abolition of nuclear weapons as well as nuclear power. This movement aimed to bring attention to the devastating effects of nuclear disasters on both living beings and the environment.",
         "European Pressphoto Agency",
         2011
     );
@@ -42,7 +42,7 @@ function initializeArray()
     var slide3 = new ViewFinder(
         "Yellow Vest Protests in France",
         "Images/Image3.jpg",
-        "Yellow Vest Protests in France that started in 2018 as a response to rising fuel prices and economic inequality.",
+        "Yellow Vest Protests in France that started in 2018 as a response to rising fuel prices and economic inequality including high living costs. This movement was important because it highlighted the struggles of the working-class living in rural and semi-rural areas.",
         "Getty Images",
         2018
     );
@@ -50,7 +50,7 @@ function initializeArray()
     var slide4 = new ViewFinder(
         "#EndSARS now Movement",
         "Images/Image4.jpg",
-        "The #ENDSars now movement started in Nigeria in 2020 in protest against police brutality and corruption.",
+        "The #ENDSars now movement started in Nigeria in 2020 in protest against police brutality and corruption. It started as a protest against the Special Anti-Robbery Squad (SARS) which was known for abusing citizens, illegally detaining people and even killing people. The movement gained widespead attention after a video showed a SARS officer killing a young man. It brough global attention to the human rights violation in Nigreria.",
         "Crisisgroup.org",
         2020
     );
