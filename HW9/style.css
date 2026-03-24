@@ -1,0 +1,38 @@
+body { 
+    background-color: black;
+}
+#dream {
+  width: 200px;
+  height: auto;
+}
+
+#nextBtn {
+  display: block;
+  z-index: 10; 
+}
+
+#quote {
+    font-size: 24px;
+    width: 300px;
+    color: white;
+  }
+#shape1, #shape2, #shape3 {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+}
+.circle {
+    border-radius: 50%;
+    background-color: rgb(255, 215, 140);
+}
+.square {
+    border-radius: 0;
+    background-color: rgb(167, 255, 255);
+}
+.rectangle {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(192, 178, 255);
+}
