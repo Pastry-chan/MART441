@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+#scoreBoard {
+    font-size: 20px;
+    margin-top: 10px;
+}
+#board {
+    background-color: rgb(0, 0, 0);
+    margin-top: 20px;
+}
+
