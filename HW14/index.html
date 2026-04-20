@@ -41,6 +41,7 @@ var score = 0;
 var gameOver = false;
 var scoreText;
 var spikes;
+var timer;
 
 var game = new Phaser.Game(config);
 
@@ -50,9 +51,9 @@ function preload ()
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
-    this.load.spritesheet('dude', 'assets/dude.png',
+    this.load.spritesheet('dude', 'assets/newsprite.png',
         { frameWidth: 32, frameHeight: 48 });
-    this.load.image('spike', 'assets/spikedball.png');
+    this.load.image('spike', 'assets/spikes.png');
 }
 
 function create ()
@@ -103,14 +104,25 @@ function create ()
     });
 
     stars.children.iterate(function (child) {
+        child.setScale(0.5)
 
         child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+        child.setGravityY(150); 
+
+        child.body.setSize(child.width, child.height - 12);
+        child.body.setOffset(0, 6);
 
     });
 
     bombs = this.physics.add.group();
 
     scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+
+    this.gameTime = 30;
+    this.timerText = this.add.text(600, 16, 'Time: 30', {
+        fontSize: '32px',
+        fill: '#000'
+    });
 
     this.physics.add.collider(player, platforms);
     this.physics.add.collider(stars, platforms);
@@ -122,11 +134,26 @@ function create ()
 
     spikes = this.physics.add.staticGroup();
 
-    spikes.create(600, 345, 'spike').setScale(0.5);
-    spikes.create(50, 195, 'spike').setScale(0.5);
-    spikes.create(750, 165, 'spike').setScale(0.5);
+    spikes.create(600, 351, 'spike').setScale(2.5);
+    spikes.create(50, 201, 'spike').setScale(2.5);
+    spikes.create(750, 171, 'spike').setScale(2.5);
 
     this.physics.add.collider(player, spikes, hitSpike, null, this);
+
+    this.time.addEvent({
+        delay: 1000,
+        callback: function () {
+
+            if (gameOver) return;
+            this.gameTime--;
+            this.timerText.setText('Time: ' + this.gameTime);
+            if (this.gameTime <= 0) {
+            gameOver = true;
+            }
+        },
+    callbackScope: this,
+    loop: true
+});
 }
 
 function update ()
