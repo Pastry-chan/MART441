@@ -49,7 +49,6 @@
 
         <h1>Interactive Art Final</h1>
 
-
     <div id="game-container"></div>  
     
          <div class="instructions">
@@ -63,7 +62,6 @@
                 Try to explore all the platforms without falling!
             </p>
         </div>
-
     </div>   
 
 
@@ -109,7 +107,7 @@ function preload ()
 function create ()
 {
 
-  this.physics.world.TILE_BIAS = 32;  
+    this.physics.world.TILE_BIAS = 32;  
     this.physics.world.setBounds(0, -600, 3869, 1200);
     this.cameras.main.setBounds(0, -600, 3869, 1200);
 
